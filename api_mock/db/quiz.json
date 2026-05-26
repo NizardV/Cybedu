@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "questions": [
+      {
+        "id": 1,
+        "questionText": "Quel est l’objectif principal d’une attaque de phishing ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Tromper la victime pour obtenir des informations sensibles"
+          },
+          {
+            "id": 2,
+            "text": "Surcharger un serveur pour le rendre indisponible"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 2,
+        "questionText": "Quel réflexe aide à détecter un email de phishing ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Vérifier l'expéditeur et l'URL derrière les liens"
+          },
+          {
+            "id": 2,
+            "text": "Ouvrir la pièce jointe pour vérifier son contenu"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 3,
+        "questionText": "Quel outil renforce la protection contre le phishing ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Un VPN"
+          },
+          {
+            "id": 2,
+            "text": "L’authentification à deux facteurs"
+          }
+        ],
+        "correctAnswerId": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "questions": [
+      {
+        "id": 4,
+        "questionText": "Quel est un risque majeur d’un mot de passe faible ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "La compromission d’un compte"
+          },
+          {
+            "id": 2,
+            "text": "Une baisse des performances du système"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 5,
+        "questionText": "Quelle méthode est recommandée pour créer un mot de passe robuste ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Utiliser une phrase secrète"
+          },
+          {
+            "id": 2,
+            "text": "Utiliser son prénom et sa date de naissance"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 6,
+        "questionText": "Quel outil aide à gérer plusieurs mots de passe uniques ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Un gestionnaire de mots de passe"
+          },
+          {
+            "id": 2,
+            "text": "Un navigateur web"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "questions": [
+      {
+        "id": 7,
+        "questionText": "Quel type de malware chiffre les données pour demander une rançon ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Spyware"
+          },
+          {
+            "id": 2,
+            "text": "Ransomware"
+          }
+        ],
+        "correctAnswerId": 2
+      },
+      {
+        "id": 8,
+        "questionText": "Quel vecteur d’infection est courant pour les malwares ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Emails piégés"
+          },
+          {
+            "id": 2,
+            "text": "Mises à jour automatiques"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 9,
+        "questionText": "Quel moyen aide à se protéger contre les malwares ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Installer un antivirus"
+          },
+          {
+            "id": 2,
+            "text": "Ignorer les mises à jour"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "questions": [
+      {
+        "id": 10,
+        "questionText": "À quoi sert principalement un VPN ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Chiffrer la connexion internet"
+          },
+          {
+            "id": 2,
+            "text": "Bloquer les virus"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 11,
+        "questionText": "Dans quel contexte un VPN est-il particulièrement utile ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Sur un réseau Wi-Fi public"
+          },
+          {
+            "id": 2,
+            "text": "Lors de l’installation d’applications"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 12,
+        "questionText": "Que ne garantit PAS un VPN ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "L'anonymat total"
+          },
+          {
+            "id": 2,
+            "text": "Une connexion chiffrée"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "questions": [
+      {
+        "id": 13,
+        "questionText": "Quel est un risque courant sur smartphone ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Installer des applications depuis des sources douteuses"
+          },
+          {
+            "id": 2,
+            "text": "Utiliser le mode avion"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 14,
+        "questionText": "Quelle bonne pratique améliore la sécurité mobile ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Activer le chiffrement et la biométrie"
+          },
+          {
+            "id": 2,
+            "text": "Désactiver le code de verrouillage"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 15,
+        "questionText": "Quel outil peut aider en cas de vol ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "La localisation du téléphone"
+          },
+          {
+            "id": 2,
+            "text": "Le mode silencieux"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "questions": [
+      {
+        "id": 16,
+        "questionText": "Quelle est une caractéristique d’un faux site ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Une URL légèrement modifiée"
+          },
+          {
+            "id": 2,
+            "text": "Un certificat SSL toujours valide"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 17,
+        "questionText": "Quel signe peut révéler un site frauduleux ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Des fautes d’orthographe"
+          },
+          {
+            "id": 2,
+            "text": "Un design professionnel"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 18,
+        "questionText": "Quel comportement est suspect sur un site ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Demander beaucoup d’informations rapidement"
+          },
+          {
+            "id": 2,
+            "text": "Afficher un cadenas SSL"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "questions": [
+      {
+        "id": 19,
+        "questionText": "Sur quoi repose l’ingénierie sociale ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "La manipulation psychologique"
+          },
+          {
+            "id": 2,
+            "text": "Le piratage de serveurs"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 20,
+        "questionText": "Quel est un exemple d’ingénierie sociale ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Un faux technicien qui appelle"
+          },
+          {
+            "id": 2,
+            "text": "Une mise à jour logicielle"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 21,
+        "questionText": "Quel réflexe est recommandé pour s’en protéger ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Vérifier systématiquement l’identité"
+          },
+          {
+            "id": 2,
+            "text": "Répondre rapidement pour éviter un problème"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "questions": [
+      {
+        "id": 22,
+        "questionText": "Quel type d'attaque vise à rendre un service indisponible ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "DDoS"
+          },
+          {
+            "id": 2,
+            "text": "Injection SQL"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 23,
+        "questionText": "Quel type d'attaque exploite des failles dans les formulaires web ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Phishing"
+          },
+          {
+            "id": 2,
+            "text": "Injection SQL"
+          }
+        ],
+        "correctAnswerId": 2
+      },
+      {
+        "id": 24,
+        "questionText": "Comment prévenir les attaques courantes ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "En maintenant les systèmes à jour"
+          },
+          {
+            "id": 2,
+            "text": "En désactivant l’antivirus"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "questions": [
+      {
+        "id": 25,
+        "questionText": "Quel chiffrement est recommandé pour un réseau Wi-Fi ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "WPA3"
+          },
+          {
+            "id": 2,
+            "text": "WEP"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 26,
+        "questionText": "Quel réglage doit être désactivé pour plus de sécurité ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Le WPS"
+          },
+          {
+            "id": 2,
+            "text": "Le WPA3"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 27,
+        "questionText": "Pourquoi segmenter un réseau ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Pour isoler les objets connectés vulnérables"
+          },
+          {
+            "id": 2,
+            "text": "Pour augmenter la vitesse du Wi-Fi"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "questions": [
+      {
+        "id": 28,
+        "questionText": "Quel droit est garanti par le RGPD ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Le droit d’accès aux données"
+          },
+          {
+            "id": 2,
+            "text": "Le droit de supprimer des logiciels"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 29,
+        "questionText": "Quelle obligation incombe aux entreprises ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Informer clairement les utilisateurs"
+          },
+          {
+            "id": 2,
+            "text": "Partager les données avec des partenaires"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 30,
+        "questionText": "À quoi sert le RGPD ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Protéger les données personnelles"
+          },
+          {
+            "id": 2,
+            "text": "Améliorer les performances réseaux"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "questions": [
+      {
+        "id": 31,
+        "questionText": "À quoi sert une sauvegarde régulière ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Protéger contre la perte de données"
+          },
+          {
+            "id": 2,
+            "text": "Augmenter la mémoire RAM"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 32,
+        "questionText": "Quelle est la règle 3-2-1 ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "3 copies, 2 supports, 1 hors ligne"
+          },
+          {
+            "id": 2,
+            "text": "3 mots de passe, 2 comptes, 1 antivirus"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 33,
+        "questionText": "Que faut-il tester régulièrement ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "La restauration des sauvegardes"
+          },
+          {
+            "id": 2,
+            "text": "Les performances graphiques"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "questions": [
+      {
+        "id": 34,
+        "questionText": "Qu’est-ce qu’un ransomware fait ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Il chiffre les fichiers"
+          },
+          {
+            "id": 2,
+            "text": "Il accélère le système"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 35,
+        "questionText": "Quel comportement réduit les risques ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Éviter les pièces jointes suspectes"
+          },
+          {
+            "id": 2,
+            "text": "Désactiver les sauvegardes"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 36,
+        "questionText": "Payer une rançon garantit-il la récupération des données ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Oui"
+          },
+          {
+            "id": 2,
+            "text": "Non"
+          }
+        ],
+        "correctAnswerId": 2
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "questions": [
+      {
+        "id": 37,
+        "questionText": "Quelle précaution est essentielle avec le cloud ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Activer le chiffrement"
+          },
+          {
+            "id": 2,
+            "text": "Partager tous les fichiers"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 38,
+        "questionText": "Que beaucoup d’utilisateurs oublient-ils ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Le cloud n’est pas une sauvegarde"
+          },
+          {
+            "id": 2,
+            "text": "Le cloud accélère l’ordinateur"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 39,
+        "questionText": "Quel réglage aide à récupérer des fichiers supprimés ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "L’historique des versions"
+          },
+          {
+            "id": 2,
+            "text": "Le mode sombre"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "questions": [
+      {
+        "id": 40,
+        "questionText": "À quoi servent les mises à jour ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Corriger des failles de sécurité"
+          },
+          {
+            "id": 2,
+            "text": "Augmenter le volume sonore"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 41,
+        "questionText": "Quel type d’attaque exploite des failles inconnues ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Zero-day"
+          },
+          {
+            "id": 2,
+            "text": "Phishing"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 42,
+        "questionText": "Quelle action est recommandée ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Activer les mises à jour automatiques"
+          },
+          {
+            "id": 2,
+            "text": "Les repousser régulièrement"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "questions": [
+      {
+        "id": 43,
+        "questionText": "Qui est responsable de la cybersécurité en entreprise ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Tous les employés"
+          },
+          {
+            "id": 2,
+            "text": "Uniquement la DSI"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 44,
+        "questionText": "Quelle erreur courante fragilise une entreprise ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Partager des mots de passe"
+          },
+          {
+            "id": 2,
+            "text": "Utiliser un VPN"
+          }
+        ],
+        "correctAnswerId": 1
+      },
+      {
+        "id": 45,
+        "questionText": "Quel moyen renforce la sécurité globale ?",
+        "answers": [
+          {
+            "id": 1,
+            "text": "Des formations régulières"
+          },
+          {
+            "id": 2,
+            "text": "Ignorer les consignes internes"
+          }
+        ],
+        "correctAnswerId": 1
+      }
+    ]
+  }
+]

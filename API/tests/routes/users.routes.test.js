@@ -1,0 +1,36 @@
+import request from 'supertest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
+import { createApp } from '../../src/app.js';
+import { UserService } from '../../src/modules/users/user.service.js';
+describe('User routes', () => {
+    afterEach(() => {
+        vi.restoreAllMocks();
+    });
+    it('GET /users should return the list provided by the service', async () => {
+        const mockUsers = [
+            { id: 1, email: 'test@example.com', roles: [] }
+        ];
+        const spy = vi.spyOn(UserService.prototype, 'findAll').mockResolvedValue(mockUsers);
+        const app = createApp();
+        const response = await request(app).get('/users');
+        expect(spy).toHaveBeenCalledTimes(1);
+        expect(response.status).toBe(200);
+        expect(response.body).toEqual(mockUsers);
+    });
+    it('POST /users should validate payload', async () => {
+        const app = createApp();
+        const response = await request(app).post('/users').send({ email: 'missing@pwd' });
+        expect(response.status).toBe(400);
+        expect(response.body).toHaveProperty('message');
+    });
+    it('POST /users should delegate to the service', async () => {
+        const payload = { email: 'new@example.com', password: 'secret' };
+        const createdUser = { id: 42, email: payload.email };
+        const spy = vi.spyOn(UserService.prototype, 'create').mockResolvedValue(createdUser);
+        const app = createApp();
+        const response = await request(app).post('/users').send(payload);
+        expect(spy).toHaveBeenCalledWith(payload);
+        expect(response.status).toBe(201);
+        expect(response.body).toEqual(createdUser);
+    });
+});

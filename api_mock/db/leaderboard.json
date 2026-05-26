@@ -1,0 +1,34 @@
+[
+  {
+    "rank": 1,
+    "userId": "u1",
+    "userName": "Alice",
+    "score": 1500,
+    "isCurrentUser": false,
+    "userImage": null
+  },
+  {
+    "rank": 2,
+    "userId": "u2",
+    "userName": "Bob",
+    "score": 1200,
+    "isCurrentUser": false,
+    "userImage": null
+  },
+  {
+    "rank": 3,
+    "userId": "u3",
+    "userName": "Charlie",
+    "score": 900,
+    "isCurrentUser": false,
+    "userImage": null
+  },
+  {
+    "rank": 4,
+    "userId": "u4",
+    "userName": "Toi",
+    "score": 800,
+    "isCurrentUser": true,
+    "userImage": null
+  }
+]

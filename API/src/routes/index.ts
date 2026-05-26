@@ -1,0 +1,26 @@
+import type { Express } from 'express';
+import { healthRouter } from '../modules/health/health.routes.js';
+import { userRouter } from '../modules/users/user.routes.js';
+import { articleRouter } from '../modules/articles/article.routes.js';
+import { roleRouter } from '../modules/roles/role.routes.js';
+import { quizRouter } from '../modules/quiz/quiz.routes.js';
+import { questionRouter } from '../modules/questions/question.routes.js';
+import { answerRouter } from '../modules/answers/answer.routes.js';
+import { userQuizRouter } from '../modules/user_quiz/userQuiz.routes.js';
+import { userAnswerRouter } from '../modules/user_answers/userAnswer.routes.js';
+import { authRouter } from '../modules/auth/auth.routes.js';
+import { downloadRouter } from '../modules/download/download.routes.js';
+
+export const registerRoutes = (app: Express) => {
+  app.use('/auth', authRouter);
+  app.use('/download', downloadRouter);
+  app.use('/health', healthRouter);
+  app.use('/users', userRouter);
+  app.use('/articles', articleRouter);
+  app.use('/roles', roleRouter);
+  app.use('/quizzes', quizRouter);
+  app.use('/questions', questionRouter);
+  app.use('/answers', answerRouter);
+  app.use('/user-quizzes', userQuizRouter);
+  app.use('/user-answers', userAnswerRouter);
+};

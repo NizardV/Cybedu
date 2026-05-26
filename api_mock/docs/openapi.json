@@ -1,0 +1,426 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Quiz API",
+    "version": "1.0.0",
+    "description": "API pour s'authentifier, explorer des articles et jouer à des quiz liés à ces articles."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Développement local"
+    }
+  ],
+  "tags": [
+    { "name": "Auth", "description": "Inscription et connexion des utilisateurs." },
+    { "name": "Articles", "description": "Consultation des articles liés aux quiz." },
+    { "name": "Quizzes", "description": "Consulter et compléter des quiz." },
+    { "name": "System", "description": "Points d'entrée généraux." }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["System"],
+        "summary": "Statut de l'API",
+        "responses": {
+          "200": {
+            "description": "Confirmation que l'API est disponible.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string", "example": "Quiz API ready" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Créer un nouvel utilisateur",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UserRegistrationRequest" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Utilisateur créé.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/UserRegistrationResponse" }
+              }
+            }
+          },
+          "400": {
+            "description": "Données invalides."
+          },
+          "409": {
+            "description": "Nom d'utilisateur déjà utilisé."
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Obtenir un jeton JWT",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/LoginRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Connexion réussie.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/LoginResponse" }
+              }
+            }
+          },
+          "400": {
+            "description": "Données invalides."
+          },
+          "401": {
+            "description": "Identifiants incorrects."
+          }
+        }
+      }
+    },
+    "/articles": {
+      "get": {
+        "tags": ["Articles"],
+        "summary": "Lister tous les articles",
+        "responses": {
+          "200": {
+            "description": "Liste d'articles.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Article" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/articles/{id}": {
+      "get": {
+        "tags": ["Articles"],
+        "summary": "Récupérer un article",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" },
+            "description": "Identifiant de l'article."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Article trouvé.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Article" }
+              }
+            }
+          },
+          "400": {
+            "description": "Identifiant invalide."
+          },
+          "404": {
+            "description": "Article introuvable."
+          }
+        }
+      }
+    },
+    "/quizzes": {
+      "get": {
+        "tags": ["Quizzes"],
+        "summary": "Lister les quiz disponibles",
+        "responses": {
+          "200": {
+            "description": "Liste des quiz avec informations liées.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/QuizSummary" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/quizzes/{id}": {
+      "get": {
+        "tags": ["Quizzes"],
+        "summary": "Obtenir un quiz",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" },
+            "description": "Identifiant du quiz."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Quiz trouvé.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/QuizDetail" }
+              }
+            }
+          },
+          "400": {
+            "description": "Identifiant invalide."
+          },
+          "401": {
+            "description": "Jeton manquant ou invalide."
+          },
+          "404": {
+            "description": "Quiz introuvable."
+          }
+        }
+      }
+    },
+    "/quizzes/{id}/submit": {
+      "post": {
+        "tags": ["Quizzes"],
+        "summary": "Envoyer les réponses d'un quiz",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" },
+            "description": "Identifiant du quiz."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/QuizSubmissionRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Résultat du quiz.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/QuizSubmissionResponse" }
+              }
+            }
+          },
+          "400": {
+            "description": "Données invalides."
+          },
+          "401": {
+            "description": "Jeton manquant ou invalide."
+          },
+          "404": {
+            "description": "Quiz introuvable."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "UserRegistrationRequest": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string", "example": "nouvelUtilisateur" },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "description": "Doit contenir au moins 8 caractères.",
+            "example": "MotdepasseSecurise123"
+          }
+        }
+      },
+      "UserRegistrationResponse": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 2 },
+          "username": { "type": "string", "example": "nouvelUtilisateur" },
+          "role": { "type": "string", "example": "student" }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["username", "password"],
+        "properties": {
+          "username": { "type": "string", "example": "demo" },
+          "password": { "type": "string", "format": "password", "example": "password" }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "Jeton JWT à utiliser dans l'en-tête Authorization.",
+            "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+          }
+        }
+      },
+      "Article": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 1 },
+          "title": { "type": "string", "example": "Network Security Basics" },
+          "description": {
+            "type": "string",
+            "example": "Fundamentals of protecting network communication and services."
+          },
+          "resource": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://example.com/articles/network-security-basics"
+          }
+        }
+      },
+      "QuizQuestion": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 1 },
+          "prompt": {
+            "type": "string",
+            "example": "Which protocol encrypts web traffic by default?"
+          },
+          "choices": {
+            "type": "array",
+            "items": { "type": "string" },
+            "example": ["HTTPS", "HTTP", "FTP", "Telnet"]
+          }
+        }
+      },
+      "QuizSummary": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer", "example": 1 },
+          "title": { "type": "string", "example": "Network Security Essentials" },
+          "description": {
+            "type": "string",
+            "example": "Check your understanding of baseline network security practices."
+          },
+          "articleId": { "type": "integer", "example": 1 },
+          "questions": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/QuizQuestion" }
+          },
+          "article": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "id": { "type": "integer" },
+              "title": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      },
+      "QuizDetail": {
+        "allOf": [
+          { "$ref": "#/components/schemas/QuizSummary" },
+          {
+            "type": "object",
+            "properties": {
+              "article": {
+                "oneOf": [
+                  { "$ref": "#/components/schemas/Article" },
+                  { "type": "null" }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "QuizSubmissionRequest": {
+        "type": "object",
+        "required": ["answers"],
+        "properties": {
+          "answers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "example": {
+              "1": 0,
+              "2": 2,
+              "3": 1
+            }
+          }
+        }
+      },
+      "QuizQuestionResult": {
+        "type": "object",
+        "properties": {
+          "questionId": { "type": "integer", "example": 1 },
+          "correct": { "type": "boolean", "example": true },
+          "correctAnswer": { "type": "integer", "example": 0 },
+          "submittedAnswer": {
+            "type": "integer",
+            "nullable": true,
+            "example": 0
+          },
+          "explanation": {
+            "type": "string",
+            "nullable": true,
+            "example": "HTTPS relies on TLS to encrypt traffic end to end."
+          }
+        }
+      },
+      "QuizSubmissionResponse": {
+        "type": "object",
+        "properties": {
+          "quizId": { "type": "integer", "example": 1 },
+          "totalQuestions": { "type": "integer", "example": 3 },
+          "score": { "type": "integer", "example": 2 },
+          "results": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/QuizQuestionResult" }
+          },
+          "article": {
+            "oneOf": [
+              { "$ref": "#/components/schemas/Article" },
+              { "type": "null" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

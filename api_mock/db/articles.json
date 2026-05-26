@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "Comprendre le phishing",
+    "description": "Un aperçu clair des techniques utilisées dans les attaques de phishing, avec des exemples concrets et les meilleures pratiques pour s'en protéger.",
+    "content": "Le phishing est aujourd’hui l’une des techniques les plus utilisées par les cybercriminels pour tromper les utilisateurs.\nLe principe est simple : pousser la victime à cliquer sur un lien, télécharger une pièce jointe ou communiquer des informations sensibles.\n\nLes hackers jouent souvent sur l’urgence ou l’émotion : faux emails de livraison, messages bancaires alarmants, faux remboursements, etc.\nPour s’en protéger, il est important de vérifier l’expéditeur, l’URL derrière les liens, et de ne jamais fournir d’informations sensibles sans vérifier la source.\nL’authentification à deux facteurs reste également une défense essentielle.\n",
+    "resource": "https://example.com/phishing-guide"
+  },
+  {
+    "id": 2,
+    "title": "Sécuriser son mot de passe",
+    "description": "Pourquoi utiliser un mot de passe complexe ? Cet article explique les risques liés aux mots de passe faibles et propose des méthodes pour les renforcer.",
+    "content": "Les mots de passe simples ou réutilisés sont la cause de milliers de comptes compromis chaque jour.\nUn bon mot de passe doit être long, unique et imprévisible.\nL'utilisation d'une phrase secrète est aujourd’hui recommandée : plus facile à retenir, mais beaucoup plus difficile à casser.\n\nLes gestionnaires de mots de passe sont également une excellente solution pour conserver des identifiants uniques sans avoir à tous les mémoriser.\nEnfin, activer l’authentification multifactorielle réduit drastiquement les risques d’intrusion, même en cas de fuite d’un mot de passe.\n",
+    "resource": "https://example.com/password-security"
+  },
+  {
+    "id": 3,
+    "title": "Les malwares en 2025",
+    "description": "Un panorama des menaces actuelles : ransomware, spyware, trojans, et leurs vecteurs d’attaque principaux.",
+    "content": "Les malwares ont évolué rapidement ces dernières années, devenant plus furtifs et plus automatisés.\nLes ransomwares ciblent désormais des entreprises de toutes tailles grâce à des attaques opportunistes.\nLes spywares se dissimulent dans des applications ou extensions douteuses pour récolter des données personnelles.\n\nLes principaux vecteurs restent les emails piégés, les téléchargements illégitimes, les clés USB infectées et les failles dans les logiciels non mis à jour.\nLa prévention repose sur la vigilance, les mises à jour régulières et l’utilisation d’antivirus fiables.\n",
+    "resource": "https://example.com/malware-2025"
+  },
+  {
+    "id": 4,
+    "title": "VPN : utile ou non ?",
+    "description": "Détails sur l’usage d’un VPN, ses avantages en matière de confidentialité et ses limites.",
+    "content": "Un VPN crée un tunnel chiffré entre votre appareil et un serveur distant, ce qui rend difficile l'interception de vos données.\nC'est particulièrement utile sur les réseaux Wi-Fi publics, où les attaquants peuvent espionner les communications.\n\nCependant, un VPN ne rend pas anonyme à 100 %, ne protège pas des malwares et ne compense pas des mauvaises pratiques.\nIl doit être considéré comme un outil de confidentialité, et non comme une solution de sécurité complète.\n",
+    "resource": "https://example.com/vpn-usage"
+  },
+  {
+    "id": 5,
+    "title": "Sécurité mobile",
+    "description": "Comment protéger son smartphone contre les applications malveillantes, le vol et les fuites de données.",
+    "content": "Les smartphones contiennent aujourd’hui plus d’informations personnelles qu’un ordinateur.\nInstaller des applications depuis des sources douteuses, accéder à des Wi-Fi publics ou ne pas verrouiller son téléphone expose à des risques importants.\n\nPour se protéger :\n- installer uniquement depuis les stores officiels,\n- activer le code, la biométrie et le chiffrement,\n- éviter les permissions excessives,\n- garder le système à jour.\n\nLa sauvegarde régulière et l’activation du service de localisation peuvent également sauver la mise en cas de vol.\n",
+    "resource": "https://example.com/mobile-security"
+  },
+  {
+    "id": 6,
+    "title": "Reconnaître un faux site",
+    "description": "Techniques simples pour identifier un site frauduleux, grâce à l’analyse de l’URL, du certificat SSL et de la mise en page.",
+    "content": "Les faux sites imitent presque parfaitement les sites légitimes pour voler identifiants et informations bancaires.\nPour les repérer, il faut analyser :\n- l’URL exacte et ses variations subtiles,\n- la présence d’un certificat valide (cadenas),\n- la qualité de la mise en page,\n- les fautes d’orthographe,\n- les demandes inhabituelles d’informations.\n\nSi un site demande trop d'informations trop vite, c’est généralement mauvais signe.\n",
+    "resource": "https://example.com/fake-website-detection"
+  },
+  {
+    "id": 7,
+    "title": "L’ingénierie sociale",
+    "description": "Comprendre les manipulations psychologiques utilisées par les cybercriminels pour obtenir des informations.",
+    "content": "L’ingénierie sociale repose sur la manipulation.\nPlutôt que d’attaquer un système informatique, les cybercriminels attaquent les humains :\nappels téléphoniques, usurpation d’identité, faux techniciens, messages pressants...\n\nL’objectif est d’amener la victime à agir sans réfléchir.\nPour s’en protéger, il faut adopter un réflexe simple : *vérifier systématiquement*.\nUn collègue peut-il prouver son identité ?\nUne demande inhabituelle semble-elle logique ?\nNe jamais céder à la pression ou à l’urgence.\n",
+    "resource": "https://example.com/social-engineering"
+  },
+  {
+    "id": 8,
+    "title": "Les cyberattaques les plus courantes",
+    "description": "Un top des attaques les plus répandues : DDoS, phishing, injection SQL, malware…",
+    "content": "Chaque année, les attaques évoluent, mais certaines restent incontournables.\nLes DDoS visent à rendre un service indisponible.\nLes injections SQL exploitent des failles dans les formulaires web.\nLes malwares pénètrent via des fichiers infectés.\n\nComprendre ces attaques permet de mieux les prévenir, notamment grâce aux mises à jour, aux filtres anti-spam, à l’analyse des entrées utilisateurs et à des sauvegardes régulières.\n",
+    "resource": "https://example.com/common-attacks"
+  },
+  {
+    "id": 9,
+    "title": "Sécuriser son réseau Wi-Fi",
+    "description": "Astuce pour éviter les intrusions dans son réseau personnel : chiffrement WPA3, filtrage MAC, gestion du routeur.",
+    "content": "Le Wi-Fi est souvent la première porte d’entrée pour un attaquant.\nUtiliser un chiffrement WPA3, modifier le mot de passe par défaut du routeur et désactiver le WPS sont des mesures essentielles.\n\nLe filtrage MAC et la segmentation du réseau peuvent ajouter un niveau de sécurité supplémentaire, notamment pour les objets connectés souvent vulnérables.\n",
+    "resource": "https://example.com/secure-wifi"
+  },
+  {
+    "id": 10,
+    "title": "RGPD : ce que vous devez savoir",
+    "description": "Les bases du Règlement Général sur la Protection des Données expliquées simplement.",
+    "content": "Le RGPD encadre la collecte, le stockage et l’utilisation des données personnelles.\nChaque personne a des droits : accès, rectification, effacement et portabilité.\nLes entreprises ont des obligations strictes : informer clairement, sécuriser les données, documenter leurs traitements.\n\nComprendre le RGPD permet aux utilisateurs de maîtriser leur vie numérique, et aux entreprises de respecter la loi.\n",
+    "resource": "https://example.com/rgpd-basics"
+  },
+  {
+    "id": 11,
+    "title": "Sauvegardes et restauration",
+    "description": "Pourquoi et comment effectuer des sauvegardes régulières pour éviter la perte de données.",
+    "content": "Une sauvegarde régulière protège de la perte de données due à un accident, un vol ou une attaque ransomware.\nElle peut être locale (disque dur) ou en ligne (cloud).\nUne bonne règle est la stratégie 3-2-1 :\n3 copies,\n2 supports différents,\n1 hors ligne.\n\nTester régulièrement la restauration est tout aussi important que sauvegarder.\n",
+    "resource": "https://example.com/backup-guide"
+  },
+  {
+    "id": 12,
+    "title": "Comprendre le ransomware",
+    "description": "Le fonctionnement d’un ransomware, les risques encourus et comment s'en prémunir efficacement.",
+    "content": "Les ransomwares chiffrent vos fichiers et exigent une rançon pour les récupérer.\nIls se propagent via des emails frauduleux, des sites compromis ou des logiciels piratés.\n\nPour s’en protéger :\n- faire des sauvegardes régulières,\n- éviter les pièces jointes suspectes,\n- maintenir le système à jour,\n- limiter les droits utilisateurs.\n\nPayer ne garantit **jamais** le déchiffrement.\n",
+    "resource": "https://example.com/ransomware"
+  },
+  {
+    "id": 13,
+    "title": "Sécurité dans le cloud",
+    "description": "Les bonnes pratiques pour stocker ses données dans le cloud sans risque.",
+    "content": "Le cloud est pratique, mais il faut respecter certaines règles :\nchoisir un fournisseur fiable, activer le chiffrement, limiter les partages et surveiller les accès.\n\nBeaucoup oublient que le cloud n’est pas une sauvegarde : si vous supprimez un fichier, il peut disparaître partout.\nActiver l’historique des versions est donc essentiel.\n",
+    "resource": "https://example.com/cloud-security"
+  },
+  {
+    "id": 14,
+    "title": "Les mises à jour : essentielles",
+    "description": "Pourquoi il est crucial de maintenir ses logiciels, OS et applications à jour.",
+    "content": "Les mises à jour corrigent des failles que les cybercriminels exploitent activement.\nRepousser ces mises à jour laisse une porte ouverte.\nLes attaques ‘zero-day’ sont particulièrement dangereuses car elles exploitent des vulnérabilités encore inconnues.\n\nActiver les mises à jour automatiques est l’un des gestes les plus simples mais les plus efficaces en cybersécurité.\n",
+    "resource": "https://example.com/updates-importance"
+  },
+  {
+    "id": 15,
+    "title": "Cybersécurité au travail",
+    "description": "Rôle de chaque employé dans la sécurité informatique et conseils pour éviter les erreurs courantes.",
+    "content": "La sécurité en entreprise ne dépend pas uniquement de la DSI : chaque employé joue un rôle.\nLes erreurs courantes incluent le partage de mots de passe, le stockage de données sensibles sur des supports non chiffrés ou encore l’ouverture de pièces jointes douteuses.\n\nUne bonne hygiène numérique, des formations régulières et une communication interne claire renforcent la sécurité globale.\n",
+    "resource": "https://example.com/workplace-cybersecurity"
+  }
+]

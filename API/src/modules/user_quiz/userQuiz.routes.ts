@@ -1,0 +1,16 @@
+import { Router } from 'express';
+import { UserQuizController } from './userQuiz.controller.js';
+import { authenticate } from '../../middleware/authenticate.js';
+
+const router = Router();
+const controller = new UserQuizController();
+
+router.get('/', authenticate, controller.list);
+router.get('/user/:userId', authenticate, controller.listByUser);
+router.get('/quiz/:quizId', authenticate, controller.listByQuiz);
+router.get('/:id', authenticate, controller.getOne);
+router.post('/', authenticate, controller.create);
+router.put('/:id', authenticate, controller.update);
+router.delete('/:id', authenticate, controller.remove);
+
+export const userQuizRouter = router;
