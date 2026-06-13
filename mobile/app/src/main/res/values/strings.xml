@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cybedu</string>
+
+    <string name="connection">Connexion</string>
+
+    <string name="userId">Identifiant</string>
+    <string name="password">Mot de passe</string>
+
+    <string name="search">Rechercher</string>
+
+    <string name="knowledge_test">Tester mes connaissances</string>
+</resources>
