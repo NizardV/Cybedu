@@ -1,20 +1,48 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Cybedu — API
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+> Backend Node.js/TypeScript de l'application Cybedu / Node.js/TypeScript backend for the Cybedu app
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=flat&logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+> Retour au projet principal / Back to main project: [Cybedu](../README.md)
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+---
+
+## Installation / Install
+
+```bash
+npm install
+```
+
+## Lancer / Run
+
+```bash
+# Développement / Development
+npm run dev
+
+# Production
+npm run build && npm start
+```
+
+## Variables d'environnement / Environment variables
+
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/cybedu
+JWT_SECRET=[À COMPLÉTER / TO COMPLETE]
+PORT=3000
+```
+
+## Routes principales / Main routes
+
+| Méthode | Route | Description FR | Description EN |
+|---------|-------|----------------|----------------|
+| `POST` | `/auth/register` | Inscription | Register |
+| `POST` | `/auth/login` | Connexion | Login |
+| `GET` | `/quiz` | Liste des quiz | Quiz list |
+| `GET` | `/articles` | Liste des articles | Article list |
+| `GET` | `/leaderboard` | Classement | Leaderboard |
+
+La documentation complète des routes est disponible dans `api-mock/` via la spec OpenAPI.
+Full route documentation is available in `api-mock/` via the OpenAPI spec.
